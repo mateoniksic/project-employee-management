@@ -2,7 +2,6 @@
 
 ## Tech Stack
 - ReactJS *(18.2.0)*
-  - *ReactRouter, ReactContextAPI, ReactQuery, ReactHookForm, ReactErrorBoundary, ...*
 - PostgreSQL (Supabase)
 - HTML / CSS
 - TypeScript
