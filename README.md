@@ -3,7 +3,7 @@
 ## Tech Stack
 - ReactJS *(18.2.0)*
 - PostgreSQL (Supabase)
-- HTML / CSS
+- HTML / CSS (Tailwind)
 - TypeScript
 
 ## How to start the application?
