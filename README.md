@@ -15,7 +15,7 @@
 4. **Stop command:** CTRL + C
 
 ## Live preview
-- [[ CLICK HERE TO EXPERIENCE UNTITLEDCRM IN ACTION → ]](https://project-employee-management.vercel.app/)
+- [[ CLICK HERE TO EXPERIENCE EMPLOYEE MANAGEMENT IN ACTION → ]](https://project-employee-management.vercel.app/)
 
 # Sneak peek
 ![employee-management-list](https://github.com/mateoniksic/project-employee-management/assets/57192709/c2e0ee58-c1dd-456d-84c8-e8c6cd064cfa)
