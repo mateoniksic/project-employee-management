@@ -38,7 +38,7 @@ export default function AppLayout() {
               <DialogTrigger asChild>
                 <Button>Add employee</Button>
               </DialogTrigger>
-              <DialogContent className="max-h-screen overflow-auto">
+              <DialogContent className="max-h-[100dvh] overflow-auto">
                 <DialogHeader>
                   <DialogTitle className="mb-4">Add new employee</DialogTitle>
                   <DialogDescription asChild>
