@@ -8,7 +8,7 @@ function EmployeeDetails() {
   if (isLoading) return <div>Loading...</div>;
 
   return (
-    <div className="p-8">
+    <div className="p-4">
       <h1 className="text-2xl mb-8">Summary view</h1>
       <EmployeeForm
         updateSessionId={updateSessionId}

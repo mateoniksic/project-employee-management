@@ -21,10 +21,10 @@ export default function AppLayout() {
   return (
     <div>
       <div className="h-full">
-        <div className="flex flex-row justify-between items-center border-b p-4 font-semibold text-lg bg-gradient-to-r from-blue-50 to-blue-100">
+        <div className="flex flex-row flex-wrap items-center justify-between gap-4 border-b bg-gradient-to-r from-blue-50 to-blue-100 p-4 text-lg font-semibold">
           <div>
             Employee management
-            <span className="font-normal text-xs ml-2">(@Mateo Niksic)</span>
+            <span className="ml-2 text-xs font-normal">(@Mateo Niksic)</span>
           </div>
           {employeeIsSelected ? (
             <Button
@@ -38,7 +38,7 @@ export default function AppLayout() {
               <DialogTrigger asChild>
                 <Button>Add employee</Button>
               </DialogTrigger>
-              <DialogContent>
+              <DialogContent className="max-h-screen overflow-auto">
                 <DialogHeader>
                   <DialogTitle className="mb-4">Add new employee</DialogTitle>
                   <DialogDescription asChild>
@@ -49,7 +49,7 @@ export default function AppLayout() {
             </Dialog>
           )}
         </div>
-        <div className="p-8 max-w-3xl m-auto">
+        <div className="m-auto max-w-3xl p-4">
           {!employeeIsSelected && <EmployeeList />}
           {employeeIsSelected && <EmployeeDetails />}
         </div>

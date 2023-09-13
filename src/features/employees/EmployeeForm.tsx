@@ -69,7 +69,7 @@ export default function EmployeeForm({
         avatar: '',
         date_of_birth: new Date(),
 
-        sex: '',
+        sex: 'male',
         contract_type: '',
         contract_length: 0,
         contract_start_date: new Date(),
@@ -110,7 +110,7 @@ export default function EmployeeForm({
       <Form {...form}>
         <form onSubmit={form.handleSubmit(onSubmit)}>
           <div className="mb-4 flex flex-col gap-4">
-            <div className="bg-slate-50 flex flex-col gap-4 border rounded-sm p-4">
+            <div className="flex flex-col gap-4 rounded-sm border bg-slate-50 p-4">
               <div className="text-sm font-semibold uppercase">
                 Personal information
               </div>
@@ -119,7 +119,7 @@ export default function EmployeeForm({
                 name="avatar"
                 render={({ field }) => (
                   <FormItem className="flex-1">
-                    <FormLabel>Avatar</FormLabel>
+                    <FormLabel className="whitespace-nowrap">Avatar</FormLabel>
                     <FormControl>
                       <Input
                         className="bg-white"
@@ -132,13 +132,13 @@ export default function EmployeeForm({
                 )}
               />
 
-              <div className="flex flex-row justify-stretch items-start gap-4">
+              <div className="flex flex-row flex-wrap items-start justify-stretch gap-4">
                 <FormField
                   control={form.control}
                   name="name"
                   render={({ field }) => (
                     <FormItem className="flex-1">
-                      <FormLabel>Name</FormLabel>
+                      <FormLabel className="whitespace-nowrap">Name</FormLabel>
                       <FormControl>
                         <Input
                           className="bg-white"
@@ -156,7 +156,9 @@ export default function EmployeeForm({
                   name="surname"
                   render={({ field }) => (
                     <FormItem className="flex-1">
-                      <FormLabel>Surname</FormLabel>
+                      <FormLabel className="whitespace-nowrap">
+                        Surname
+                      </FormLabel>
                       <FormControl>
                         <Input
                           className="bg-white"
@@ -170,20 +172,22 @@ export default function EmployeeForm({
                 />
               </div>
 
-              <div className="flex flex-row justify-stretch items-start gap-4">
+              <div className="flex flex-row flex-wrap items-start justify-stretch gap-4">
                 <FormField
                   control={form.control}
                   name="date_of_birth"
                   render={({ field }) => (
-                    <FormItem className="flex flex-col">
-                      <FormLabel>Date of birth</FormLabel>
+                    <FormItem className="flex flex-1 flex-col">
+                      <FormLabel className="whitespace-nowrap">
+                        Date of birth
+                      </FormLabel>
                       <Popover>
                         <PopoverTrigger asChild>
                           <FormControl>
                             <Button
                               variant={'outline'}
                               className={cn(
-                                'bg-white min-w-[14rem] flex-1 pl-3 text-left font-normal',
+                                'min-w-[14rem] bg-white pl-3 text-left font-normal',
                                 !field.value && 'text-muted-foreground',
                               )}>
                               {field.value ? (
@@ -213,7 +217,7 @@ export default function EmployeeForm({
                   control={form.control}
                   name="sex"
                   render={({ field }) => (
-                    <FormItem className="flex-1 flex flex-col">
+                    <FormItem className="flex flex-1 flex-col">
                       <FormLabel>Sex</FormLabel>
                       <Select
                         onValueChange={field.onChange}
@@ -235,17 +239,19 @@ export default function EmployeeForm({
               </div>
             </div>
 
-            <div className="bg-slate-50 flex flex-col gap-4 border rounded-sm p-4">
+            <div className="flex flex-col gap-4 rounded-sm border bg-slate-50 p-4">
               <div className="text-sm font-semibold uppercase">
                 Contract information
               </div>
-              <div className="flex flex-row justify-stretch items-start gap-4">
+              <div className="flex flex-row flex-wrap items-start justify-stretch gap-4">
                 <FormField
                   control={form.control}
                   name="contract_type"
                   render={({ field }) => (
                     <FormItem className="flex-1">
-                      <FormLabel>Contract type</FormLabel>
+                      <FormLabel className="whitespace-nowrap">
+                        Contract type
+                      </FormLabel>
                       <Select
                         onValueChange={field.onChange}
                         defaultValue={field.value || 'definite'}>
@@ -269,7 +275,9 @@ export default function EmployeeForm({
                   name="contract_length"
                   render={({ field }) => (
                     <FormItem className="flex-1">
-                      <FormLabel>Contract length</FormLabel>
+                      <FormLabel className="whitespace-nowrap">
+                        Contract length
+                      </FormLabel>
                       <FormControl>
                         <Input
                           className="bg-white"
@@ -291,20 +299,22 @@ export default function EmployeeForm({
                 />
               </div>
 
-              <div className="flex flex-row justify-stretch items-start gap-4">
+              <div className="flex flex-row flex-wrap items-start justify-stretch gap-4">
                 <FormField
                   control={form.control}
                   name="contract_start_date"
                   render={({ field }) => (
-                    <FormItem className="flex flex-col">
-                      <FormLabel>Contract start date</FormLabel>
+                    <FormItem className="flex flex-1 flex-col">
+                      <FormLabel className="whitespace-nowrap">
+                        Contract start date
+                      </FormLabel>
                       <Popover>
                         <PopoverTrigger asChild>
                           <FormControl>
                             <Button
                               variant={'outline'}
                               className={cn(
-                                'bg-white min-w-[14rem] flex-1 pl-3 text-left font-normal',
+                                'min-w-[14rem] bg-white pl-3 text-left font-normal',
                                 !field.value && 'text-muted-foreground',
                               )}>
                               {field.value ? (
@@ -334,8 +344,10 @@ export default function EmployeeForm({
                   control={form.control}
                   name="department"
                   render={({ field }) => (
-                    <FormItem className="flex-1 flex flex-col">
-                      <FormLabel>Department</FormLabel>
+                    <FormItem className="flex flex-1 flex-col">
+                      <FormLabel className="whitespace-nowrap">
+                        Department
+                      </FormLabel>
                       <FormControl>
                         <Input
                           className="bg-white"
@@ -350,17 +362,19 @@ export default function EmployeeForm({
               </div>
             </div>
 
-            <div className="bg-slate-50 flex flex-col gap-4 border rounded-sm p-4">
+            <div className="flex flex-col gap-4 rounded-sm border bg-slate-50 p-4">
               <div className="text-sm font-semibold uppercase">
                 Contract details
               </div>
-              <div className="flex flex-row justify-stretch items-start gap-4">
+              <div className="flex flex-row flex-wrap items-start justify-stretch gap-4">
                 <FormField
                   control={form.control}
                   name="vacation_days"
                   render={({ field }) => (
                     <FormItem className="flex-1">
-                      <FormLabel>Vacation days</FormLabel>
+                      <FormLabel className="whitespace-nowrap">
+                        Vacation days
+                      </FormLabel>
                       <FormControl>
                         <Input
                           className="bg-white"
@@ -383,7 +397,9 @@ export default function EmployeeForm({
                   name="paid_leave_days"
                   render={({ field }) => (
                     <FormItem className="flex-1">
-                      <FormLabel>Paid leave days</FormLabel>
+                      <FormLabel className="whitespace-nowrap">
+                        Paid leave days
+                      </FormLabel>
                       <FormControl>
                         <Input
                           className="bg-white"
@@ -406,7 +422,9 @@ export default function EmployeeForm({
                   name="free_days"
                   render={({ field }) => (
                     <FormItem className="flex-1">
-                      <FormLabel>Free days</FormLabel>
+                      <FormLabel className="whitespace-nowrap">
+                        Free days
+                      </FormLabel>
                       <FormControl>
                         <Input
                           className="bg-white"
