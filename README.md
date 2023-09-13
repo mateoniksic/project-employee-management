@@ -1,27 +1,24 @@
-# React + TypeScript + Vite
+# Employee Management
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+## Tech Stack
+- ReactJS *(18.2.0)*
+- PostgreSQL (Supabase)
+- HTML / CSS (Tailwind)
+- TypeScript
 
-Currently, two official plugins are available:
+## How to start the application?
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+1. **Clone repository**
+2. **Run command:** `npm run dev`
+3. **Open in browser:** http://localhost:5173/
+4. **Stop command:** CTRL + C
 
-## Expanding the ESLint configuration
+## Live preview
+- [[ CLICK HERE TO EXPERIENCE EMPLOYEE MANAGEMENT IN ACTION → ]](https://project-employee-management.vercel.app/)
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
+## Sneak peek
+![employee-management-list](https://github.com/mateoniksic/project-employee-management/assets/57192709/c2e0ee58-c1dd-456d-84c8-e8c6cd064cfa)
+![employee-management-form](https://github.com/mateoniksic/project-employee-management/assets/57192709/4afd4a36-53eb-4a9c-8239-828cb8c71daf)
+![employee-management-summary](https://github.com/mateoniksic/project-employee-management/assets/57192709/ae5d206a-ba78-4f07-8890-8a56f17f0644)
 
-- Configure the top-level `parserOptions` property like this:
 
-```js
-   parserOptions: {
-    ecmaVersion: 'latest',
-    sourceType: 'module',
-    project: ['./tsconfig.json', './tsconfig.node.json'],
-    tsconfigRootDir: __dirname,
-   },
-```
-
-- Replace `plugin:@typescript-eslint/recommended` to `plugin:@typescript-eslint/recommended-type-checked` or `plugin:@typescript-eslint/strict-type-checked`
-- Optionally add `plugin:@typescript-eslint/stylistic-type-checked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and add `plugin:react/recommended` & `plugin:react/jsx-runtime` to the `extends` list
